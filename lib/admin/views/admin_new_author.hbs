@@ -1,0 +1,37 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2 class="sub-header">{{#if author}}Edit{{else}}New{{/if}} Author</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Social Media</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                  	<tr>
+                        <td width="50"><input class="input-block-level name-input" type="text" value="{{author.name}}" /></td>
+                        <td width="300">
+                            <input type="text" class="input-block-level type-input"    style="float:left" placeholder="Account Type" />
+                            <input type="text" class="input-block-level url-input"     style="float:left" placeholder="Social Media URL" />
+                            <input type="text" class="input-block-level display-input" style="float:left" placeholder="Display Text" />
+                            <button class="btn add-social-media" style="float:left">+ Add Link</button>
+                        </td>
+                        <td class="social-media-container"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><button class="save-author" style="float:right;">Save Author</button></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<input class="id" style="display:none;" type="text" value="{{author.id}}"/>
+
+<script>
+    var socialMediaEntries = [];
+</script>

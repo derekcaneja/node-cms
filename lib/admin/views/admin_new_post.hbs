@@ -1,0 +1,38 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2 class="sub-header">{{#if post}}Edit{{else}}New{{/if}} Post</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Link</th>
+                    <th>Title</th>
+                    <th>Image URL</th>
+                    <th>Author</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="input-block-level slug-input"   type="text" placeholder="my-link-name" value="{{post.slug}}"  /></td>
+                    <td><input class="input-block-level title-input"  type="text" value="{{post.title}}" /></td>
+                    <td><input class="input-block-level img-input"    type="text" value="{{post.img}}"  /></td>
+                    <td>
+                        <select class="input-block-level author-input">
+                            {{#each authors}}
+                                <option>{{name}}</option>
+                            {{/each}}
+                        </select>
+                    </td>
+                </tr>
+                <textarea class="content-input" style="width:100%; height:500px;" placeholder="Content">{{post.content}}</textarea>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button class="save-post" style="float:right;">Save Post</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<input class="id" style="display:none;" type="text" value="{{post.id}}"/>

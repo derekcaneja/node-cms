@@ -1,0 +1,53 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2 class="sub-header">{{#if page}}Edit{{else}}New{{/if}} Page</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Slug</th>
+                    <th>Template</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="input-block-level title-input" type="text" placeholder="My Blog"      value="{{page.title}}"/></td>
+                    <td><input class="input-block-level slug-input"  type="text" placeholder="/contact_us"  value="{{page.slug}}"/></td>
+                    <td>
+                        <select class="input-block-level template-input">
+                            {{#each templates}}
+                                <option value="{{name}}" {{is_selected name ../page.template}}>{{name}}</option>
+                            {{/each}}
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2 class="sub-header">Template Properties</h2>
+    <div class="table-responsive">
+        <table class="table table-striped template-properties">
+            <thead>
+                <tr class="template-properties-headers">
+                    {{#each page.data}}
+                        <th>{{determine_syntax @key}}</th>
+                    {{/each}}
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="template-properties-inputs">
+                    {{#each page.data}}
+                        <td><input class="input-block-level template-properties-input"  type="text" data-property="{{@key}}" value="{{this}}"/></td>
+                    {{/each}}
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><button class="save-page" style="float:right;">Save Page</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<input class="id" style="display:none;" type="text" value="{{page.id}}"/>

@@ -1,0 +1,51 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2 class="sub-header">New Post</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Blog Title</th>
+                    <th>Contact Email</th>
+                    <th>URL</th>
+                    <th>URL Schema</th>
+                    <th>Social Media</th>
+                    <th>Database</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="input-block-level title-input"      type="text" placeholder="My Blog"               value="{{config.title}}"/></td>
+                    <td><input class="input-block-level contact-input"    type="text" placeholder="contact@my_blog.com"   value="{{config.contact}}"/></td>
+                    <td><input class="input-block-level url-input"        type="text" placeholder="Blog Url"              value="{{config.url}}"/></td>
+                    <td><input class="input-block-level url-schema-input" type="text" placeholder="/posts/:slug"          value="{{config.urlSchema}}"/></td>
+                    <td><input class="input-block-level facebook-input"   type="text" placeholder="Facebook URL"          value="{{config.social_media.facebook}}"/></td>
+                    <td><input class="input-block-level host-input"       type="text" placeholder="Host URL"              value="{{config.database.host}}"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input class="input-block-level twitter-input" type="text" placeholder="Twitter URL" value="{{config.social_media.twitter}}"/></td>
+                    <td><input class="input-block-level user-input"    type="text" placeholder="Username"    value="{{config.database.user}}"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input class="input-block-level instagram-input" type="text"      placeholder="Instagram URL" value="{{config.social_media.instagram}}"/></td>
+                    <td><input class="input-block-level pass-input"      type="password"  placeholder="Password"      value="{{config.database.pass}}"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button class="save-settings" style="float:right;">Save Settings</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
